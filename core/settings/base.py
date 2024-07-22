@@ -189,7 +189,7 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 
 
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
 
 from datetime import timedelta
 
@@ -200,3 +200,12 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
     'SLIDING_TOKEN_LIFETIME_LATE_USER': timedelta(days=30),
 }
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'behruzzo662@gmail.com'
+EMAIL_HOST_PASSWORD = 'behruz_zo_663'
+DEFAULT_FROM_EMAIL = 'behruzzo662@gmail.com'
